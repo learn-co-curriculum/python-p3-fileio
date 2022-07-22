@@ -1,4 +1,4 @@
-# Intro to file IO
+# Intro to File IO
 
 ## Learning Goals
 
