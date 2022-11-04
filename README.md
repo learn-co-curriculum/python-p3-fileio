@@ -88,23 +88,23 @@ encoding. The default is platform dependent
 
 A file should be closed as soon as we are done using it. An open file can block
 other programs from using the file depending on the mode we open it in.
-You can close the file by using the `close()` function.
+You can close the file by using the `close()` method:
 
 ```py
 text_file = open('file_name.txt', encoding='utf-8')
-test_file.close()
+text_file.close()
 ```
 
 Nobody is perfect. What if we forget to close a file?
-We can prevent problems like this by using the `with` statement
+We can prevent problems like this by using a `with` statement:
 
 ```py
 with open('file_name.txt', encoding='utf-8') as text_file:
     text_file.read()
 ```
 
-Inside the `with` statement code block we can use the variable `text_file`.
-When the block ends, Python will automatically call `test_file.close()`.
+Inside the `with` code block we can use the variable `text_file`.
+When the block ends, Python will automatically call `text_file.close()`.
 The `with` statement guarantees the file will be closed even in the case of an
 exception.
 
