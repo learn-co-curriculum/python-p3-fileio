@@ -37,9 +37,9 @@ A **file** is simply a container for storing information. This can be as
 plaintext in `.txt` files, or in special formatted files with `.docx` or `.pdf`
 extensions. There are also certain extensions- like `.py`- which give the
 computer and its users some hints about how to get the most out of the text
-contained inside, but that really only store plaintext. For instance, you can
-open a `.py` file in an IDE like VSCode or execute it using the Python
-interpreter, but you can also open it in a simple text editor.
+contained inside, but which really label files that only store plaintext. For
+instance, you can open a `.py` file in an IDE like VSCode or execute it using
+the Python interpreter, but you can also open it in a simple text editor.
 
 We've all worked with files many times before, but did you know that
 Python can open, write to, save, and close files as well? We call this process
@@ -206,6 +206,9 @@ If we use `mode='a'` we will append what we write to the existing file.
 Now that we have a better understanding of how to interact with files
 in Python. We can apply this knowledge to many use cases like storing data,
 writing logs and interacting with other programs.
+
+In the next lab, you'll get the chance to use the `open()` function to automate
+file I/O.
 
 ***
 
