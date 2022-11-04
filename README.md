@@ -2,8 +2,8 @@
 
 ## Learning Goals
 
-- Reading from a file
-- Writing to a file
+- Read text from a file.
+- Save changes to a file.
 
 ***
 
@@ -144,15 +144,15 @@ text_file = open('file_directory/file_name.txt', mode='w' encoding='utf-8')
 ## Reading from a file
 
 When we want to read from a file we have to open it first.
-We can read from a file using the `read()` method
+We can read from a file using the `read()` method:
 
 ```py
-# Lets say the text_file.txt contains the following sentence
+# Lets say the text_file.txt contains the following sentence:
 # The door swung open to reveal pink giraffes and red elephants.
 
 text_file = open('text_file.txt', encoding='utf-8')
 print(text_file.read())
-# The door swung open to reveal pink giraffes and red elephants.
+# => The door swung open to reveal pink giraffes and red elephants.
 
 ```
 
@@ -166,25 +166,24 @@ method which gives us the entire file content.
 ```py
 with open('big_file.txt', encoding='utf-8') as text_file:
     for line in text_file:
-        print(line) #process line
+        # Process the individual line
+        print(line)
 ```
 
 ***
 
 ## Writing to a File
 
-Writing a file is similar to reading from a file.
+Writing to a file is similar to reading from a file.
 The only difference is that we have to open the file in
-either the write or append mode.
+either the "write" or "append" mode.
 
 - The write mode can be defined using the argument `mode='w'`
 - The append mode can be defined using `mode='a'`
 
-What if the file does not exist?
-
 The write and append modes will create a new file if it does not
-already exist. We can use the `.write()` function to write and append
- to the file.
+already exist. We can use the `.write()` method to write and append
+to the file.
 
 ```py
 #Writing to a file
@@ -206,7 +205,8 @@ If we use `mode='a'` we will append what we write to the existing file.
 
 Now that we have a better understanding of how to interact with files
 in Python. We can apply this knowledge to many use cases like storing data,
- writing logs and interacting with other programs.
+writing logs and interacting with other programs.
+
 ***
 
 ## Resources
