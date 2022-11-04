@@ -30,8 +30,8 @@ packages, and scripts that you intend to use in your application.
 ## Introduction
 
 When we work with computers, we need to do much more than execute code and
-browse the internet. If we want to save our work- or access data created by
-other programs and computers- we need to save it into **files**.
+browse the internet. If we want to save our work- or access data saved by
+other programs and computers- we need to use **files**.
 
 A **file** is simply a container for storing information. This can be as
 plaintext in `.txt` files, or in special formatted files with `.docx` or `.pdf`
@@ -56,18 +56,22 @@ accomplish this in Python with the `open()` function:
 text_file = open('file_directory/file_name.txt')
 ```
 
-The only required argument for the open function is a combination of
-file path and file name.
+The only required argument for the open function is the path to the file in
+question. This can be an existing file or a path to a new one.
+
+> **NOTE: Python can create files very easily, but it takes some extra work to
+> create directories. It's usually best to make all of your directories before
+> using the `open()` function.**
 
 Now we can use the `text_file` variable to do operations on the file.
 
 What operations can do?
-It depends on the mode we have opened the file in.
-The default mode is read but we can specify different modes
+It depends on the **mode** we have opened the file in.
+The default mode is **read**, but we can specify different modes
 using a second argument into the open function.
 
-We can  define the encoding of the file using the `encoding`
-attribute
+We can define the encoding of the file using the `encoding`
+attribute:
 
 ```py
 text_file = open('file_directory/file_name.txt', encoding='utf-8')
@@ -75,9 +79,8 @@ text_file = open('file_directory/file_name.txt', encoding='utf-8')
 
 If you do not specify the encoding Python will use a default
 encoding. The default is platform dependent
-(whatever `locale.getpreferredencoding()` returns)
-
-It is considered good practice to always define the encoding.
+(whatever `locale.getpreferredencoding()` returns), though it is typically
+`utf-8`. It is considered best practice to always define the encoding.
 
 ***
 
