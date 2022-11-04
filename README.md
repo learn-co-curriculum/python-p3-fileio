@@ -23,21 +23,34 @@ is installed on your computer automatically when you download Python.
 can be activated or deactivated at any time.
 - **Pipenv**: a virtual environment tool that uses `pip` to manage the modules,
 packages, and scripts that you intend to use in your application.
-- **Mode** represents the file's permissions
+- **Mode** represents the file's permissions.
 
 ***
 
 ## Introduction
 
-When we work with computers, our code needs to be able to
-store data and access data created by other programs and computers.
-The way we do that is file input/output (File IO). In this lesson we will talk
- about how to read data from files, how to write data, and how to work with
-that data.
+When we work with computers, we need to do much more than execute code and
+browse the internet. If we want to save our work- or access data created by
+other programs and computers- we need to save it into **files**.
+
+A **file** is simply a container for storing information. This can be as
+plaintext in `.txt` files, or in special formatted files with `.docx` or `.pdf`
+extensions. There are also certain extensions- like `.py`- which give the
+computer and its users some hints about how to get the most out of the text
+contained inside, but that really only store plaintext. For instance, you can
+open a `.py` file in an IDE like VSCode or execute it using the Python
+interpreter, but you can also open it in a simple text editor.
+
+We've all worked with files many times before, but did you know that
+Python can open, write to, save, and close files as well? We call this process
+**file I/O** (input/output), and it's actually quite simple.
 
 ***
 
 ## Opening a file
+
+Before working with any file, we need to open it to access its contents. You can
+accomplish this in Python with the `open()` function:
 
 ```py
 text_file = open('file_directory/file_name.txt')
