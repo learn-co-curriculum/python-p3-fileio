@@ -113,20 +113,19 @@ exception.
 ## Modes
 
 The `mode` attribute of a file can tell you which mode the file had been
- opened in.
+opened in.
 
 ```py
 text_file = open('file_directory/file_name.txt')
 
-print (text_file.mode)
-#r
+print(text_file.mode)
+# => r
 ```
 
-The default mode is read but we can pass a second argument which
+The default mode is "read", but we can pass a second argument which
 allows us to open the file in many different modes that serve different
 use cases. These modes will allow us to do things like write to a file,
-open a file in binary and, append to a file. We will look into these in more
-detail later in this lesson.
+open a file in binary, and append to a file.
 
 Here are some example of how we can define a mode.
 
